@@ -32,14 +32,7 @@ Route::get('/', [AdminController::class,'admin'])->name('dashboard');
 
 
 
-Route::group(['prefix' => 'sidebars'], function () {
-    Route::get('/', [SidebarTwoController::class, 'create'])->name('sidebars.create');
-    Route::post('/add', [SidebarTwoController::class, 'store'])->name('sidebars.add');
-    Route::get('/index', [SidebarTwoController::class, 'index'])->name('sidebars.index');
-    Route::get('/edit/{id}', [SidebarTwoController::class, 'edit'])->name('sidebars.edit');
-    Route::post('/update/{id}', [SidebarTwoController::class, 'update'])->name('sidebars.update');
-    Route::get('/delete/{id}', [SidebarTwoController::class, 'destroy'])->name('sidebars.delete');
-});
+
 
 Route::group(['prefix' => 'product'], function () {
     Route::get('/', [ProductController::class, 'create'])->name('product.create');
