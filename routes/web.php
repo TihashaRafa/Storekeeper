@@ -38,10 +38,15 @@ Route::group(['prefix' => 'product'], function () {
     Route::get('/', [ProductController::class, 'create'])->name('product.create');
     Route::post('/add', [ProductController::class, 'store'])->name('product.add');
     Route::get('/index', [ProductController::class, 'index'])->name('product.index');
+   
+    Route::get('/sale', [ProductController::class, 'sale'])->name('product.sale');
+   // Route::post('pro/sale/{id}', [ProductController::class, 'processSale'])->name('product.processSale');
+    
     Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
     Route::post('/update/{id}', [ProductController::class, 'update'])->name('product.update');
     Route::get('/delete/{id}', [ProductController::class, 'destroy'])->name('product.delete');
 });
 
+Route::post('/process-sale', [ProductController::class, 'processSale'])->name('product.processSale');
 
 

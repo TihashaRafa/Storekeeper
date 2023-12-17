@@ -9,15 +9,6 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      {{-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="{{ asset('backend/dist/img/user2-160x160.jpg') }} " class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
-        </div>
-      </div> --}}
 
       <!-- SidebarSearch Form -->
       <div class="form-inline">
@@ -40,22 +31,21 @@
               <p>Dashboard</p>
             </a>
           </li>
-       
-
-          <li class="nav-item">
-            <a href="{{ route('sidebars.index') }}" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Sidebar
-              </p>
-            </a>
-          </li>
 
           <li class="nav-item">
             <a href="{{ route('product.index') }}" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Product
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{ route('product.sale') }}" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Sale Products
               </p>
             </a>
           </li>
