@@ -45,6 +45,14 @@
                                         </div>
                                     </div>
 
+                                    <div class="form-group row">
+                                        <label for="product_date" class="col-sm-2 col-form-label">Date</label>
+                                        <div class="col-sm-10">
+                                            <input type="date" class="form-control" id="product_date" name="product_date">
+                                        </div>
+                                    </div>
+
+
                                     
                                 </div>
                                 <div class="card-footer">

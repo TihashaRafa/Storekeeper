@@ -51,6 +51,14 @@
                                     </div>  
                               </div>
 
+                              <div class="form-group row">
+                                <label for="product_date" class="col-sm-2 col-form-label">Date</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="product_date" id="product_date"
+                                        value="{{ $products->product_date }}">
+                                </div>  
+                          </div>
+
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-info">Update</button>

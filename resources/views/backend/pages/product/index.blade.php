@@ -44,6 +44,7 @@
                                             <th>Name</th>
                                             <th>Price</th>
                                             <th>Quantity</th>
+                                            <th>Date</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -54,6 +55,8 @@
                                                 <td>{{ $items->product_name }}</td>
                                                 <td>{{ $items->product_price }}</td>
                                                 <td>{{ $items->product_quantity }}</td>
+                                                <td>{{ \Carbon\Carbon::parse($items->product_date)->format('m/d/Y') }}
+                                                </td>
                                                 <td>
                                                   <a href="{{ route('product.edit', $items->id) }}" class="btn btn-primary btn-sm">Edit</a>
                                                   <a href="{{ route('product.delete', $items->id) }}" class="btn btn-primary btn-sm">Delete</a>
