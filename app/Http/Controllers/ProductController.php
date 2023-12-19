@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -65,21 +67,12 @@ class ProductController extends Controller
 
     public function processSale(Request $request)
     {
-        // Retrieve the product ID from the request
-        $productId = $request->input('product_id');  // Ensure this matches the name in your form
-    
-        // Retrieve the new product quantity from the request
-        $newQuantity = $request->input('product_quantity');  // Ensure this matches the name in your form
-    
-        // Find the product by its ID
+        $productId = $request->input('product_id');  
+        $newQuantity = $request->input('product_quantity'); 
         $product = Product::find($productId);
-    
-        // Check if the product exists
         if (is_null($product)) {
             return back()->with('error', 'Product not found.');
         }
-    
-        // Update the product's quantity and save the changes
         $product->product_quantity = $newQuantity;
         $product->save();
     

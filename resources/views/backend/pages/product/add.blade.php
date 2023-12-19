@@ -50,10 +50,7 @@
                                         <div class="col-sm-10">
                                             <input type="date" class="form-control" id="product_date" name="product_date">
                                         </div>
-                                    </div>
-
-
-                                    
+                                    </div>        
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Create</button>

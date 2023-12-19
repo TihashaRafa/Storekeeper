@@ -1,7 +1,6 @@
 @extends('backend.Layouts.admin')
 @section('admin_content')
 
-
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <div class="content-header">
@@ -25,7 +24,8 @@
           <!-- small box -->
           <div class="small-box bg-info">
             <div class="inner">
-              <h3>11</h3>
+            
+              <h3>{{ $productPriceToday }}</h3>
 
               <p>Daily</p>
             </div>
@@ -40,7 +40,7 @@
           <!-- small box -->
           <div class="small-box bg-success">
             <div class="inner">
-              <h3>53</h3>
+              <h3>{{ $productPriceYesterday }}</h3>
 
               <p>Yesterday</p>
             </div>
@@ -55,7 +55,7 @@
           <!-- small box -->
           <div class="small-box bg-warning">
             <div class="inner">
-              <h3>44</h3>
+              <h3>{{ $productPriceThisMonth }}</h3>
 
               <p>This Month</p>
             </div>
@@ -70,7 +70,7 @@
           <!-- small box -->
           <div class="small-box bg-danger">
             <div class="inner">
-              <h3>65</h3>
+              <h3>{{ $productPriceLastMonth }}</h3>
 
               <p>Last Month</p>
             </div>
